@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Java Test");
+		System.out.print("Enter Number: ");
+		int a = sc.nextInt();
+		System.out.println("Given Number: ");
+		System.out.println("Binary Equivalent: "+ Integer.toBinaryString(a));
+		System.out.println("Octal Equivalent: "+ Integer.toOctalString(a));
+		System.out.println("HexaDecimal Equivalent: "+ Integer.toHexString(a));
+		sc.close();
+
+	}
+
+}
