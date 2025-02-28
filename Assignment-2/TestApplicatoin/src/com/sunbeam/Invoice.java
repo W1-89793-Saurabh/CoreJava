@@ -67,8 +67,6 @@ public class Invoice{
 	}
 	
 	public double getInvoice() {
-//		System.out.printf("partNumber %s\n partDiscription %s\n purchasedItemQuantity %d\n pricePerItem %.2f",this.pricePerItem, this.partDiscription, this.purchasedItemQuantity, this.pricePerItem );
-//		System.out.println("Invoice :"+ (purchasedItemQuantity*pricePerItem));
 		return purchasedItemQuantity*pricePerItem;
 	}
 	
