@@ -38,21 +38,14 @@ public class Invoice{
 		return purchasedItemQuantity;
 	}
 	public void setPurchasedItemQuantity(int purchasedItemQuantity) {
-		if(purchasedItemQuantity>0) {
 		this.purchasedItemQuantity = purchasedItemQuantity;
-		} else {
-			this.purchasedItemQuantity=0;
-		}
 	}
 	public double getPricePerItem() {
 		return pricePerItem;
 	}
 	public void setPricePerItem(double pricePerItem) {
-		if(pricePerItem>0) {
 		this.pricePerItem = pricePerItem;
-		} else {
-			this.pricePerItem = 0.0;
-		}
+
 	}
 	public void accept() {
 		Scanner sc = new Scanner(System.in);
@@ -67,7 +60,15 @@ public class Invoice{
 	}
 	
 	public double getInvoice() {
-		return purchasedItemQuantity*pricePerItem;
+		if (pricePerItem >0) {
+			if(purchasedItemQuantity>0) {
+				return (purchasedItemQuantity*pricePerItem);
+			}else if(purchasedItemQuantity<=0) {
+				return 0;
+			}
+		}else {
+				return 0.0;
+			} return 0.0;
 	}
 	
 	void Display() {
